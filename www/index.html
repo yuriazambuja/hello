@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#2196f3">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>Recebimento</title>
+  <link rel="icon" type="image/png" href="./custom/img/favicon.ico" />
+  <link rel="apple-touch-icon-precomposed" href="./custom/img/favicon.png"/>
+</head>
+<body>
+  <div id="text"></div>
+  <script src="./custom/js/orchestrator.js"></script>
+  <script src="./cordova.js"></script>
+  <script>
+      document.addEventListener("deviceready",function(){
+      console.log("ok");
+      new orchestrator(function(obj){
+        console.log(obj);
+        document.getElementById("text").innerHTML+=obj+"<br/>------------------<br/>";
+      },false,"192.168.0.19",9050,"jde","jde");
+    },false);
+  </script>
+</body>
+</html>

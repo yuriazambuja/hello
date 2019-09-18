@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#2196f3">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>Recebimento</title>
+  <link rel="stylesheet" href="./layout/css/framework7.bundle.min.css">
+  <link rel="stylesheet" href="./custom/css/icons.css">
+  <link rel="stylesheet" href="./custom/css/app.css">
+  <link rel="icon" type="image/png" href="./custom/img/favicon.ico" />
+  <link rel="apple-touch-icon-precomposed" href="./custom/img/favicon.png"/>
+</head>
+<body>
+  <div id="app">
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar"></div>
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main safe-areas">
+      <!-- Page, data-name contains page name which can be used in callbacks -->
+      <div class="page" data-name="home">
+        <!-- Top Navbar -->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="title sliding">Recebimento</div>
+          </div>
+        </div>
+        <!-- Scrollable page content-->
+        <div class="page-content">
+          <p align="center">
+            <img src="./custom/img/mpl-logo.png" />
+          </p>
+          <div class="block-title">Autenticação no Sistema</div>
+          <div class="list accordion-list">
+            <ul>
+              <li class="item-content item-input" id="user">
+                <div class="item-inner">
+                  <div class="item-title item-floating-label">Usuário</div>
+                  <div class="item-input-wrap">
+                    <input type="text" class="input-with-value" autocomplete="off" />
+                  </div>
+                </div>
+              </li>
+              <li class="item-content item-input" id="pswd">
+                <div class="item-inner">
+                  <div class="item-title item-floating-label">Senha</div>
+                  <div class="item-input-wrap">
+                    <input type="password" class="input-with-value" autocomplete="off" />
+                  </div>
+                </div>
+              </li>
+              <li class="accordion-item" id="conf">
+                <a href="#" class="item-link item-content">
+                  <div class="item-inner">
+                    <div class="item-title">Detalhes</div>
+                  </div>
+                </a>
+                <div class="accordion-item-content">
+                  <form class="list" class="form-store-data">
+                    <ul>
+                      <li class="item-content item-input" id="host">
+                        <div class="item-inner">
+                          <div class="item-title item-floating-label">Servidor</div>
+                          <div class="item-input-wrap">
+                            <input type="text" class="input-with-value" autocomplete="off" />
+                          </div>
+                        </div>
+                      </li>
+                      <li class="item-content item-input" id="port">
+                        <div class="item-inner">
+                          <div class="item-title item-floating-label">Porta</div>
+                          <div class="item-input-wrap">
+                            <input type="number" class="input-with-value" autocomplete="off" />
+                          </div>
+                        </div>
+                      </li>
+                      <li class="item-content">
+                        <div class="item-inner">
+                          <span>Protocolo SSL</span>
+                          <label class="toggle toggle-init color-green" id="type">
+                            <input type="checkbox">
+                            <span class="toggle-icon"></span>
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                  </form>
+                </div>
+              </li>
+              <li>
+                  <a href="#" class="list-button" id="login">OK</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Cordova -->
+  <script src="./cordova.js"></script>
+  <!-- Framework7 library -->
+  <script src="./layout/js/framework7.bundle.min.js"></script>
+  <!-- API WebSerice -->
+  <script src="./custom/js/orchestrator.js"></script>
+  <!-- Your custom app scripts -->
+  <script src="./custom/js/javascript.js"></script>
+</body>
+</html>
